@@ -74,3 +74,28 @@ body{
   border-radius: 10px;
   max-width: 330px;
 }
+.success{
+  padding: 20px;
+  background-color: rgba(0, 231, 0, 0.326);
+  margin-top: 20px;
+  border-radius: 40px;
+  transition: all 100ms;
+  transition: all 2ms;
+  animation: up 2s 0s linear ;
+}
+.error{
+  padding: 20px;
+  background-color: rgba(231, 0, 12, 0.326);
+  margin-top: 20px;
+  border-radius: 40px;
+  transition: all 2ms;
+  animation: up 2s 0s linear ;
+}
+
+@keyframes up {
+  from{
+    transform: translateY(30%);
+  }to{
+    transform: translateY(0%);
+  }
+}
