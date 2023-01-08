@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import AlertMessage from './Components/AlertMessage.jsx'
+import sendUser from './services/sendUser.js'
 
 const App = () => {
   const [userData, setUserData] = useState({})
@@ -13,13 +14,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await fetch('http://localhost:3000/usuarios', {
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-      })
+      sendUser(userData)
       setSuccess(true)
     } catch (error) {
       console.error(error)
