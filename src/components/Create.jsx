@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import AlertMessage from './Components/AlertMessage.jsx'
-import sendUser from './services/sendUser.js'
+import AlertMessage from './AlertMessage.jsx'
+import sendUser from '../services/sendUser.js'
+import Header from './Header.jsx'
 
-const App = () => {
+const Create = () => {
   const [userData, setUserData] = useState({})
   const [isSuccess, setSuccess] = useState()
   const handleOnChange = (e) => {
@@ -23,6 +24,7 @@ const App = () => {
   }
   return (
     <>
+      <Header />
       <form method='post' onSubmit={handleSubmit} className='form'>
         <label htmlFor='user'>
           Nombre: <input type='text' id='user' name='user' value={userData.name} placeholder='Inserte su name' onChange={handleOnChange} />
@@ -40,4 +42,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Create

@@ -17,14 +17,14 @@ function SetMessage ({ children }) {
 }
 function SuccessMessage () {
   return (
-    <div className='success'>
+    <div className='success display'>
       <p>En horabuena! tu informacion se a enviado💖</p>
     </div>
   )
 }
 function ErrorMessage () {
   return (
-    <div className='error'>
+    <div className='error display'>
       <p>Oh no! ah ocurrido un problema💀</p>
     </div>
   )
