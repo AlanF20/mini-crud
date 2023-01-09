@@ -7,7 +7,9 @@ export default async function sendUser (userData) {
       },
       body: JSON.stringify(userData)
     })
+    return true
   } catch (error) {
-    return error
+    console.log(error)
+    return false
   }
 }

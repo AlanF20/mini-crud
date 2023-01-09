@@ -3,7 +3,8 @@ export default function AlertMessage ({ status }) {
   const message = status ? <SuccessMessage /> : <ErrorMessage />
   return (
     <>
-      {!isUndefined && <SetMessage>{message}</SetMessage>}
+      {!isUndefined && status != null && <SetMessage>{message}</SetMessage>}
+      {status == null && !isUndefined && <SetMessage />}
     </>
   )
 }

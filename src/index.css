@@ -37,6 +37,7 @@ body{
   gap: 20px;
   list-style: none;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
 .header__nav-ul-li-link{
   text-decoration: none;
@@ -98,4 +99,15 @@ body{
   }to{
     transform: translateY(0%);
   }
+}
+.users__ul{
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-top: 40px;
+}
+.users__ul-li{
+  padding: 20px;
 }

@@ -4,19 +4,19 @@ import { App } from './components/App.jsx'
 import Create from './components/Create.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Users from './components/Users.jsx'
+import ViewUsers from './components/ViewUsers.jsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/mini-crud',
     element: <App />
   },
   {
-    path: '/Ver',
-    element: <Users />
+    path: '/mini-crud/Ver',
+    element: <ViewUsers />
   },
   {
-    path: '/Crear',
+    path: '/mini-crud/Crear',
     element: <Create />
   }
 ])

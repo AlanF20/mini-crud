@@ -15,12 +15,14 @@ const Create = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      sendUser(userData)
-      setSuccess(true)
+      const isComplete = await sendUser(userData)
+      isComplete ? setSuccess(true) : setSuccess(false)
     } catch (error) {
       console.error(error)
-      setSuccess(false)
     }
+    setTimeout(() => {
+      setSuccess(null)
+    }, 5000)
   }
   return (
     <>
